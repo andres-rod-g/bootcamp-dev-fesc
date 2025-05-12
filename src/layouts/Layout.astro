@@ -1,3 +1,10 @@
+---
+import "../styles/global.css";
+
+import IndexHeader from "@/components/layouts/indexHeader";
+import IndexNav from "@/components/layouts/indexNav";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,7 +15,20 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<div class="flex flex-col p-2 w-screen h-screen bg-white">
+			{/* Header */}
+			<IndexHeader client:load />
+
+			<div class="flex h-full flex-row">
+				{/* Nav */}
+				<IndexNav client:load />
+
+				{/* Content */}
+				<div class="flex w-full bg-gray-100 rounded-xl p-2">
+					<slot />
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
 
