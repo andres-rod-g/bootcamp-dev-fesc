@@ -1,0 +1,17 @@
+---
+import PanelSection from "@/components/generics/panelSection";
+import PokemonPage from "@/components/pages/pokemon/pokemon.page";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+    <PanelSection>
+    <PanelSection.Header>
+        <PanelSection.Title>Pokemon</PanelSection.Title>
+        <PanelSection.Description>Estos son los pokemones de la PokeAPI</PanelSection.Description>
+    </PanelSection.Header>
+    <PanelSection.Content>
+        <PokemonPage client:only="react"/>
+    </PanelSection.Content>
+    </PanelSection>
+</Layout>

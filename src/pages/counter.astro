@@ -1,0 +1,17 @@
+---
+import PanelSection from "@/components/generics/panelSection";
+import CounterComponent from "@/components/pages/counter/counter.component";
+import Layout from "@/layouts/Layout.astro";
+import type { only } from "node:test";
+
+---
+
+<Layout>
+    <PanelSection>
+        <PanelSection.Header>
+            <PanelSection.Title>Contador</PanelSection.Title>
+            <PanelSection.Description>Esto de acá es un contador de React</PanelSection.Description>
+        </PanelSection.Header>
+        <CounterComponent client:only="react"/>
+    </PanelSection>
+</Layout>

@@ -1,0 +1,9 @@
+---
+import EjemploPage from "@/components/pages/ejemplo.page";
+import LayoutSinEstadoGlobal from "@/layouts/LayoutSinEstadoGlobal.astro";
+
+---
+
+<LayoutSinEstadoGlobal>
+    <EjemploPage client:only="react"/>
+</LayoutSinEstadoGlobal>

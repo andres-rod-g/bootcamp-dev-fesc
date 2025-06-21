@@ -36,11 +36,20 @@ const Description: FC<Props> = ({ children }) => {
     )
 }
 
+const Content: FC<Props> = ({children}) => {
+    return (
+        <div className=' flex w-full flex-col'>
+            {children}
+        </div>
+    )
+}
+
 export default Object.assign(
     panelSection,
     {
         Title,
         Description,
-        Header
+        Header,
+        Content
     }
 )

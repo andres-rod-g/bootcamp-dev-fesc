@@ -1,0 +1,23 @@
+---
+import PanelSection from "@/components/generics/panelSection";
+import ProfileForm from "@/components/pages/profile/profile.form";
+import { Button } from "@/components/ui/button";
+import Layout from "@/layouts/Layout.astro";
+import { Save } from "lucide-react";
+
+---
+
+<Layout>
+    <PanelSection>
+        <PanelSection.Header>
+            <PanelSection.Title>Perfil del Usuario</PanelSection.Title>
+            <PanelSection.Description>Modifica la información de tu perfil</PanelSection.Description>
+        </PanelSection.Header>
+
+        <PanelSection.Content>
+            <Button className=" ml-auto" disabled> <Save/> Guardar Información</Button>
+
+            <ProfileForm client:only="react"/>
+        </PanelSection.Content>
+    </PanelSection>
+</Layout>

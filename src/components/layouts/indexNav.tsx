@@ -1,4 +1,4 @@
-import { Icon, House, ChartSpline, FileChartColumn, type LucideProps } from 'lucide-react';
+import { Icon, House, ChartSpline, FileChartColumn, Dog, type LucideProps, CircleUserRound } from 'lucide-react';
 import type { FC } from 'react';
 
 interface NavElement {
@@ -15,6 +15,11 @@ const NAV_ELEMENTS: NavElement[] = [
         icon: House
     },
     {
+        url: '/profile',
+        label: 'Perfil',
+        icon: CircleUserRound
+    },
+    {
         url: '/stats',
         label: 'Estadísticas',
         icon: ChartSpline
@@ -23,6 +28,16 @@ const NAV_ELEMENTS: NavElement[] = [
         url: '/reports',
         label: 'Generar Reportes',
         icon: FileChartColumn
+    },
+    {
+        url: '/counter',
+        label: 'Contador',
+        icon: FileChartColumn
+    },
+    {
+        url: '/pokemon',
+        label: 'Pokemon',
+        icon: Dog
     }
 ]
 
